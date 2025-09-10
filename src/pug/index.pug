@@ -1,0 +1,200 @@
+doctype html
+html(lang="uk")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        title центр медичних послуг “пульсконтроль”  
+    body 
+        include components/header
+        main 
+            section.main_container
+                .mask
+                .wrapper.wrapper_lg
+                    .main_block
+                        h1 Ваш надійний центр приватної медицини в Хмельницькому
+                        div
+                            p Ми забезпечуємо комплексну амбулаторну допомогу:
+                            ul.gap_40
+                                li 
+                                    span консультації вузьких спеціалістів
+                                li 
+                                    span сучасну діагностику
+                                li 
+                                    span медичні довідки
+                                li 
+                                    span профілактичні огляди
+                        p
+                            a(href="#").cta.page_cta Записатися на прийом
+            section.services_container.wrapper.wrapper_lg
+                include components/services
+                .dr_list
+                    .flex.gap_20
+                        p Гастроентеролог
+                        p Дерматовенеролог
+                        p Ендокринолог
+                        p Кардіолог
+                        p Невролог
+                        p Ревматолог
+                        p Терапевт
+                        p Сімейний лікар
+                        p Спортивний лікар
+                        p Травматолог
+                        p Хірург
+                        p Нарколог
+                        p Психіатр
+                        p ЛОР
+                        p Офтальмолог
+                        p Гематолог
+                        p Уролог
+                        p Функціональна  діагностика
+                        p Акушер-гінеколог
+                        p Педіатр
+                        p Денний  стаціонар-процедурний кабінет
+                        p УЗД
+                        p Профпатолог
+            section.about_container
+                .wrapper.wrapper_md 
+                    h2 центр медичних послуг “пульсконтроль”  
+                    .grid.col_2.gap_20.items-center
+                        picture 
+                            img(src="img/about_1.jpg", alt="")
+                        div.flex.info_block
+                            h3 пульсконтроль — приватна клініка сучасного формату.
+                            p Ми поєднуємо якісну медичну допомогу, новітнє обладнання та турботу про кожного пацієнта. У нас — лікарі з досвідом, зручний онлайн-запис, комфортні умови і прозорі ціни.
+                            p
+                                b Наша мета — зробити медицину доступною, безпечною та людяною.
+                            a.cta.page_cta(href="#") Обрати лікаря
+                    .grid.col_2.gap_20.items-center
+                        div.flex.info_block 
+                            h3 Чому нам довіряють:
+                            ul
+                                li 
+                                    b Комплексний підхід. 
+                                    | Усі основні напрямки медицини в одному місці.
+                                li 
+                                    b Професіоналізм.
+                                    | Лікарі з багаторічним досвідом і сучасним підходом до лікування.
+                                li 
+                                    b Прозорість. 
+                                    | Вартість послуг наперед — без прихованих платежів.
+                                li 
+                                    b Сервіс.
+                                    | Ми дбаємо про комфорт на всіх етапах — від запису до консультації.
+                            a.cta.page_cta(href="#") Наші переваги
+                        picture.order_1
+                            img(src="img/about_2.jpg", alt="")
+            include components/doctors
+            section.adv_container 
+                .wrapper.wrapper_lg 
+                    h2 переваги приватної клініки “пульсконтроль” 
+                    .grid.col_2.gap_20
+                        .img_container.grid.col_2.gap_20
+                            picture.span_2 
+                                img(src="img/adv_1.jpg", alt="")
+                            picture 
+                                img(src="img/adv_2.jpg", alt="")
+                            picture
+                                img(src="img/adv_3.jpg", alt="")
+                        .adv_list 
+                            ul
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Профогляди з виїздом на установи, організації та підприємства
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Можливість отримання медичної довідки
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Комплексне обстеження (УЗД, ЕКГ, аналізи) 
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Консультація лікаря на дому з обстеженням
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Безперервний догляд протягом усього лікування
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Орієнтація на повне одужання пацієнта
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Турботливість і висока кваліфікація персоналу
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Прозорість та відкритість лікувального процесу
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Зручний розклад прийому спеціалістів
+                                li.flex.items-center.gap_10 
+                                    span.arrow
+                                    p Комплексне лікування фізичного та психологічного стану
+            include components/review
+            section.order_container 
+                .wrapper.wrapper_md 
+                    h2 Записатися на прийом
+                    .grid.col_2.gap_20 
+                        .form_container
+                            form(action="sendorder.php" method="post")#form
+                                .grid.col_2.gap_20
+                                    .name
+                                        label(for='name') Ваше імʼя та прізвище
+                                        input#name(type='text' name='userName' minlength='3' maxlength='30' required placeholder="Імʼя та прізвище")
+                                        span.errorName
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <circle cx="10" cy="10" r="10" fill="#E40808"/>
+                                                <path d="M13 7.00002L7 13M6.99997 7L12.9999 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                    .phone
+                                        label(for='phone') Номер телефону*
+                                        input.phoneInput.inputMask(type='tel' name='userPhone' required maxlength='13' placeholder="+380")
+                                        span.error
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                                <path d="M1 9L9 1" stroke="#C61010" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M9 9L1 1" stroke="#C61010" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                    .type 
+                                        label(for="type") Оберіть послугу 
+                                        #type-select.custom-select-wrapper
+                                            select(name='type' id="type" required)
+                                                option(value='Медична довідка') Медична довідка
+                                                option(value='Запис до лікаря') Запис до лікаря
+                                            .custom-select
+                                                .custom-selected
+                                                .custom-options
+                                    .date 
+                                        label(for="date") Дата прийому
+                                        input(type="date", id="date" name="date" required)
+                                    .services_form.span_2
+                                        label(for="service") Оберіть тип довідки
+                                        #service-select.custom-select-wrapper
+                                            select(name='service' id="service" required)
+                                                option(value='для водія (форма 083/О)' data-type='Медична довідка') для водія (форма 083/О)
+                                                option(value='для отримання дозволу на зброю (форма 127/0)' data-type='Медична довідка') для отримання дозволу на зброю (форма 127/0)
+                                                option(value='для прийому на роботу (форма 086-у)' data-type='Медична довідка') для прийому на роботу (форма 086-у)
+                                                option(value='форма 1-ОМК' data-type='Медична довідка') форма 1-ОМК
+                                                option(value='про проходження психіатричного огляду (форма 100-2/0)' data-type='Медична довідка') про проходження психіатричного огляду (форма 100-2/0)
+                                                option(value='до школи (форма 086/1-0)' data-type='Медична довідка') до школи (форма 086/1-0)
+                                            
+                                                option(value='Богатирьова Вікторія Сергіївна (невропатолог)' data-type='Запис до лікаря') Богатирьова Вікторія Сергіївна (невропатолог)
+                                                option(value='Сачалко Валентина Іванівна (Дерматовенеролог)' data-type='Запис до лікаря') Сачалко Валентина Іванівна (Дерматовенеролог)
+                                                option(value='Камлук Петро Леонідович (Ортопед-травматолог, хірург)' data-type='Запис до лікаря') Камлук Петро Леонідович (Ортопед-травматолог, хірург)
+                                                option(value='Стефанович Наталя Володимирівна (Лікар з ультразвукової діагностики (УЗД) / Ендокринолог)' data-type='Запис до лікаря') Стефанович Наталя Володимирівна (Лікар з ультразвукової діагностики (УЗД) / Ендокринолог)
+                                            .custom-select
+                                                .custom-selected
+                                                .custom-options
+                                .comment.span_2
+                                    label(for="comment") Коментар до запису
+                                    textarea(name="comment" id="comment" placeholder="Коментар...")
+                                .cta_container 
+                                    button.cta.page_cta(type="submit") Записатися
+                        picture 
+                            img(src="img/form_img.jpg", alt="") 
+            section.map_container
+                .contacts_map_block 
+                    
+                    
+        include components/footer
+        script(src="js/scripts.js")

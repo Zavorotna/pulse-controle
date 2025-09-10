@@ -1,0 +1,597 @@
+@import components/mixins
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 0.7px
+    scroll-behavior: smooth
+    +media(1024)
+        font-size: 0.85px
+    +media(1920)
+        font-size: 1px
+    +media(2200)
+        font-size: 1.2px
+body
+    font-family: Montserrat
+    font-size: 20rem
+
+section
+    padding: 70rem 0
+
+ul
+    list-style: none
+
+a
+    text-decoration: none
+header
+    padding-top: 111px
+    +media(1024)
+        padding: 0
+main 
+    picture
+        height: 100%
+    img
+        width: 100%
+        object-fit: cover
+h1, h2, h3
+    font-weight: 600
+    text-transform: uppercase
+
+h1, h3
+    color: #E73A3A
+    font-size: 28rem
+    +media(768)
+        font-size: 52rem
+h2
+    padding-bottom: 50rem
+    text-align: center
+h2
+    color: #237F94
+    font-size: 30rem
+    +media(768)
+        font-size: 46rem
+
+h3,
+.about_container h3
+    font-size: 25rem
+    +media(768)
+        font-size: 30rem
+
+h4
+    min-height: 75px
+    color: #237F94
+    font-size: 24rem
+
+input, textarea, select
+    width: 100%
+    appearance: none
+    outline: none
+    padding: 13px 15px
+    font-family: Montserrat
+    font-size: 18px
+    font-weight: 500
+    border-radius: 5px
+    border: 1px solid #D9D9D9
+textarea
+    resize: none
+    height: 200rem
+button
+    border: none
+    cursor: pointer
+
+.wrapper
+    width: 95%
+    margin: 0 auto
+    padding-left: 15rem
+    padding-right: 15rem
+
+.wrapper_md 
+    +media(1024)
+        max-width: 80%
+    +media(1920)
+        max-width: 1470rem
+.wrapper_lg
+    max-width: 90%
+    +media(1920)
+        max-width: 1719rem
+
+.header_wrapper
+    width: 100%
+    +media(1200)
+        width: 80%
+    +media(1600)
+        max-width: 1033rem
+
+.flex
+    display: flex
+
+.grid
+    display: grid
+
+.items-center
+    align-items: center
+
+.flex-between
+    display: flex
+    justify-content: space-between
+
+.justify_center
+    justify-content: center
+.gap_10
+    gap: 10rem
+.gap_20
+    gap: 20rem
+.gap_40
+    gap: 40rem
+
+.col_2
+    +media(768)
+        grid-template-columns: repeat(2, 1fr)
+
+.col_4
+    +media(768)
+        grid-template-columns: repeat(2, 1fr)
+    +media(1200)
+        grid-template-columns: repeat(4, 1fr)
+
+.col_5,
+.col_6
+    grid-template-columns: repeat(3, 1fr)
+    +media(768)
+        grid-template-columns: repeat(5, 1fr)
+    +media(1600)
+        grid-template-columns: repeat(6, 1fr)
+
+.col_5
+    +media(1600)
+        grid-template-columns: repeat(5, 1fr)
+
+.cta_container
+    display: flex
+    justify-content: center
+
+.cta
+    display: block
+    padding: 23rem 10rem
+    color: #fff
+    font-size: 20rem
+    font-weight: 500
+    text-align: center
+    border-radius: 5px
+    background: #237F94
+    transition: .5s
+    &:hover
+        background: #4ABCC4
+
+.page_cta
+    width: 100%
+    max-width: 270px
+
+.cart_cta
+    width: 100%
+
+.transparent_cta
+    color: #237F94
+    background-color: #fff
+    border: 1px solid #237f94
+    &:hover
+        background: #237F94
+        color: #fff
+
+.pulse_bg
+    background:  #ddd url(../img/bg.png) no-repeat center/cover
+
+.span_2
+    +media(600)
+        grid-column: span 2
+
+
+//header
+.top_line
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background-color: #fff
+    padding: 46px 0 15px
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05)
+    z-index: 4
+    +media(1024)
+        padding: 15rem 0
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0)
+        position: static
+        border-bottom: 1px solid #CCC
+.logo
+    span
+        color: #237F94
+        font-size: 16rem
+        font-weight: 600
+        line-height: 1.2em
+        text-transform: uppercase
+
+.contacts
+    display: none
+    +media(1024)
+        display: flex
+    a, p, span
+        color: #121212
+        font-size: 18rem
+        font-weight: 500
+        line-height: 1.1em
+
+
+.social-mobile,
+.contacts-mobile
+    +media(1024)
+        display: none
+.social
+    display: none
+    +media(1024)
+        display: block
+    svg
+        .path
+            transition: .5s
+        &:hover
+            .path 
+                fill: #238094
+.close_burger
+    display: none
+.burger
+    +media(1024)
+        display: none
+.navigation_container
+    padding: 20rem 0
+    nav
+        padding: 30px 20px
+        position: fixed
+        top: -110%
+        left: 0
+        width: 100%
+        height: 100vh
+        background-color: #fff
+        transition: .5s
+        z-index: 3
+        +media(1024)
+            position: static
+            width: auto
+            height: auto
+            padding: 0
+    ul
+        +media(1024)
+            display: grid
+            grid-template-columns: repeat(7, 1fr)
+    a
+        display: block
+        padding: 15rem 30rem
+        color: #121212
+        white-space: nowrap
+        text-align: center
+        font-size: 16px
+        font-weight: 500
+        line-height: 1.2em
+        text-transform: uppercase
+        &:hover
+            color: #237F94
+            background-color: #eee
+        +media(1024)
+            padding: 0 30rem
+    li
+        border-bottom: 1px solid #ccc
+        +media(1024)
+            border-bottom: none
+    li + li
+        +media(1024)
+            border-left: 1px solid #ccc
+
+.mobile_wrapper
+    padding-top: 30rem
+    width: 60%
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+.contacts-mobile
+    p
+        margin-bottom: 20px
+        text-align: left
+        max-width: 210px
+        font-size: 16px  
+        font-weight: 500
+        a
+            text-align: left
+            padding: 0
+.social-mobile
+    justify-content: center
+    a
+        padding: 0
+
+
+//main
+.main_container
+    position: relative
+    background:  #ddd url(../img/main.jpg) no-repeat 100%/cover
+    background-position: 65% 0
+    +media(1024)
+        background-position: 50% 0
+.mask
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)
+    +media(1024)
+        display: none
+    
+.main_block
+    position: relative
+    z-index: 2
+    max-width: 1076rem
+    +media(1024)
+        padding: 120rem 0
+    div
+        padding: 50rem 0
+        font-size: 20rem
+    p
+        padding-bottom: 20rem
+    ul
+        display: flex
+        flex-direction: column
+        +media(1024)
+            flex-direction: row
+    li
+        display: inline-block
+        font-weight: 600
+        padding-left: 13px
+        white-space: nowrap
+        +media(1024)
+            padding: 0
+        span
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                top: 50%
+                right: 100%
+                width: 8px
+                height: 8px
+                border-radius: 1px
+                background: #E73A3A
+                transform: translate(-50%, -35%)
+                +media(1024)
+                    transform: translate(50%, -35%)
+                    right: -20rem
+        &:last-child
+            span
+                +media(1024)
+                    &::after
+                        background-color: transparent
+
+//services_container
+.services_container
+    padding: 30rem 0 70rem
+
+.services
+    margin-bottom: 30px
+    div
+        padding: 20rem
+        font-size: 24rem
+        font-weight: 500
+        border-radius: 5px
+        border: 2px solid #CCC
+        +media(1600)
+            padding: 30rem 40rem
+        i
+            font-size: 18rem
+        svg
+            width: 100rem
+            height: 100rem
+.dr_list
+    div
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        +media(768)
+            grid-template-columns: repeat(3, 1fr)
+        +media(1024)
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+    p
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        padding: 28rem 10rem
+        color: #FFF
+        font-size: 20rem
+        font-weight: 500
+        border-radius: 5px
+        background: #237F94
+        +media(1024)
+            width: 25vw
+            padding: 48rem 10rem
+        +media(1440)
+            width: 15vw
+        +media(1600)
+            width: 12vw
+
+
+.about_container,
+.adv_container,
+.order_container 
+    background: #ddd url(../img/bg.png) no-repeat center/cover
+    .grid
+        margin-bottom: 50rem
+        +media(768)
+            margin-bottom: 20rem
+    img
+        height: 100%
+        border-radius: 5rem
+.order_1
+    order: -1
+    +media(768)
+        order: 0
+
+.info_block
+    flex-direction: column
+    justify-content: center
+    height: 100%
+    padding: 30rem
+    background-color: #fff
+    border-radius: 5rem
+    p,h3, ul
+        padding-bottom: 30rem
+    ul
+        padding-left: 20rem
+        li
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                left: -15px
+                top: 5px
+                display: inline-block
+                margin-right: 3px
+                width: 9px
+                height: 10px
+                border-radius: 2px
+                background: #4ABCC4
+
+.doctors-wrapper
+    margin-bottom: 40rem
+    +media(500)
+        grid-template-columns: repeat(2, 1fr)
+    +media(800)
+        grid-template-columns: repeat(3, 1fr)
+
+.doctors
+    overflow: hidden
+    border-radius: 5px
+    background: #F6F6F6 
+    picture
+        display: inline-block
+        width: 100%
+    img
+        height: 500rem
+
+.description
+   
+    padding: 30rem 20rem
+    text-align: center
+    h4
+        text-transform: uppercase
+    p
+        padding: 15px 0
+        +media(500)
+            min-height: 80px
+        +media(1024)
+            min-height: 100px
+.adv_list
+    li
+        padding: 20rem 25rem
+        margin-bottom: 15rem
+        font-weight: 600
+        border-radius: 5px
+        background-color: #fff
+    span
+        display: block
+        width: 30px
+        height: 30px
+        background: #237F94  url(../img/arrow.svg) no-repeat center/60%
+        border-radius: 5px
+
+.reviews-wrapper
+    margin-bottom: 40rem
+.review
+    max-height: 250px
+    img
+        height: 100%
+        object-position: center
+
+.form_container 
+    padding: 40rem
+    background-color: #fff
+    border-radius: 5px
+    form
+        margin-bottom: 40rem
+    label
+        display: inline-block
+        font-size: 16px
+        font-weight: 500
+        margin-bottom: 10px
+.name, .phone
+    position: relative
+.errorName,
+.error
+    display: none
+    position: absolute
+    top: 50%
+    right: 15px
+    transform: translateY(20%)
+    z-index: 2
+
+//custome select
+.custom-select-wrapper select  
+    display: none 
+
+.custom-select 
+    position: relative
+    width: 100%
+    background: #fff
+    border: 1px solid #D0D5DD
+    border-radius: 5px
+    cursor: pointer
+    font-size: 18px
+
+.custom-selected 
+    padding: 13px 15px
+    color: #121212
+    font-weight: 500
+    position: relative
+
+.custom-selected
+    &::after 
+        content: ""
+        position: absolute
+        right: 15px
+        top: 50%
+        width: 10px
+        height: 10px
+        border-right: 2px solid #237F94
+        border-bottom: 2px solid #237F94
+        transform: translateY(-75%) rotate(45deg)
+        transition: 0.2s
+
+.custom-select.open .custom-selected
+    &::after 
+        transform: translateY(-50%) rotate(-135deg)
+
+.custom-options 
+    position: absolute
+    top: 90%
+    left: 0
+    width: 100%
+    background: #fff
+    border: 1px solid #D0D5DD
+    border-top: none
+    border-radius: 0 0 5px 5px
+    max-height: 220px
+    overflow-y: auto
+    display: none
+    z-index: 10
+
+.custom-option 
+    padding: 12px
+    cursor: pointer
+    color: #344054
+    font-size: 14px
+
+.custom-option
+    &:hover  
+        background: #F9FAFB 
+.custom-select.open .custom-options  
+    display: block 
