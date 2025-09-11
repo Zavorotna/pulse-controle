@@ -26,6 +26,7 @@ ul
 
 a
     text-decoration: none
+    cursor: pointer
 header
     padding-top: 111px
     +media(1024)
@@ -78,6 +79,7 @@ input, textarea, select
 textarea
     resize: none
     height: 200rem
+    margin-bottom: 40rem
 button
     border: none
     cursor: pointer
@@ -152,6 +154,7 @@ button
 .cta_container
     display: flex
     justify-content: center
+    flex-wrap: wrap
 
 .cta
     display: block
@@ -449,6 +452,7 @@ button
         padding-left: 20rem
         li
             position: relative
+            padding-bottom: 20rem
             &::before
                 content: ""
                 position: absolute
@@ -479,7 +483,6 @@ button
         height: 500rem
 
 .description
-   
     padding: 30rem 20rem
     text-align: center
     h4
@@ -497,10 +500,13 @@ button
         font-weight: 600
         border-radius: 5px
         background-color: #fff
+    p
+        max-width: 85%
+        
     span
         display: block
-        width: 30px
-        height: 30px
+        width: 30rem
+        height: 30rem
         background: #237F94  url(../img/arrow.svg) no-repeat center/60%
         border-radius: 5px
 
@@ -511,11 +517,21 @@ button
     img
         height: 100%
         object-position: center
-
+.order_container
+    margin-bottom: 70rem
 .form_container 
     padding: 40rem
     background-color: #fff
     border-radius: 5px
+    > form 
+        .col_2 
+            grid-template-columns: 1fr
+            +media(1440)
+                grid-template-columns: repeat(2, 1fr)
+        .span_2
+            grid-column: span 1
+            +media(1440)
+                grid-column: span 2
     form
         margin-bottom: 40rem
     label
@@ -525,6 +541,7 @@ button
         margin-bottom: 10px
 .name, .phone
     position: relative
+
 .errorName,
 .error
     display: none
@@ -595,3 +612,102 @@ button
         background: #F9FAFB 
 .custom-select.open .custom-options  
     display: block 
+
+.map_container
+    position: relative
+    margin-bottom: 70rem
+.map
+    position: relative
+    overflow: hidden
+    min-height: 300px
+    padding: 50rem
+    margin-top: 50rem
+    +media(768)
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        margin-top: 0
+    iframe
+        position: absolute
+        width: 100%
+        top: -72px
+        height: 120%
+        left: 0
+        // +media(768)
+.contacts_map_block
+    position: relative
+    max-width: 725rem
+    padding: 40rem 40rem 20rem
+    background-color: #fff
+    border-radius: 5px
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15)
+    z-index: 2
+    +media(1024)
+        padding: 80rem 150rem 40rem
+    > div
+        padding-bottom: 40rem
+    h3
+        font-size: 24rem
+        padding-bottom: 30rem
+    a
+        color: #121212
+        font-size: 18rem
+        font-weight: 500
+    p
+        font-weight: 400
+    b
+        display: inline-block
+        font-weight: 600
+        min-width: 85rem
+
+.contacts_map,
+.grafik_map
+    p, a
+        padding-bottom: 20rem
+
+//footer
+
+.footer
+    padding: 70rem 0
+    background: #EEE
+    ul
+        flex-direction: column
+        flex-wrap: wrap
+        min-width: 300px
+        max-height: 80px
+    a
+        color: #121212
+        transition: .5s
+        &:hover
+            color: #237F94
+.footer_container
+    +media(1024)
+        grid-template-columns: 2fr 1fr
+.contacts_footer_container
+    flex-wrap: wrap
+.info_footer,
+.contacts_footer,
+.social_footer
+    h3
+        color: #121212
+        padding-bottom: 15px
+        font-size: 16rem
+        font-weight: 600
+        text-transform: uppercase
+.contacts_footer
+    a, p
+        font-weight: 500
+
+.privacy
+    text-align: right
+    p
+        &:first-child
+            font-weight: 600
+            a
+                text-decoration: underline
+
+.copy
+    span 
+        color: #E73A3A

@@ -29,9 +29,9 @@
 
     $urlQuery = "https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=" .
         "***<b>Заявка</b>***%0A" . "%0A%0A" .
-        "Ім'я замовника: <b>$userName</b>%0A" . "%0A" .
-        "Телефон: <b>$userPhone</b>%0A" . "%0A" .
-        "Послуга: <b>$type</b>%0A" . "%0A" .
+        "Ім'я замовника: <b>$userName</b>%0A" .
+        "Телефон: <b>$userPhone</b>%0A" .
+        "Послуга: <b>$type</b>%0A".
         "Дата: <b>$date</b>%0A" . "%0A%0A" .
         "Тип довідки/Лікар: <b>$service</b>%0A" . "%0A%0A" .
         "Коментар: <b>$comment</b>%0A";
