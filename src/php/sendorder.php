@@ -14,10 +14,10 @@
         $service = "ERROR IN MESSAGE";
         $comment = "ERROR IN MESSAGE";
     }
-    // $token = "7934196878:AAEH5zA-ksHdQZgdqQY9sRHnypLO0zODzXo"; // api телеграм бота
-    // $chat_id = "-1002648016776";
-    $token = "6502486274:AAFqSGBvtvutHB8be-wTlsK3ETbssmLSEWo"; // api телеграм бота
-    $chat_id = "1066741091";
+    $token = "8274790273:AAFH8bcAC9edye_q7RDX9szEyCPfH6vK_kM"; // api телеграм бота
+    $chat_id = "-1002992930881";
+    // $token = "6502486274:AAFqSGBvtvutHB8be-wTlsK3ETbssmLSEWo"; // api телеграм бота
+    // $chat_id = "1066741091";
 
     $userPhone = urlencode("$userPhone");
     $userName = urlencode("$userName");
@@ -33,8 +33,11 @@
         "Телефон: <b>$userPhone</b>%0A" .
         "Послуга: <b>$type</b>%0A".
         "Дата: <b>$date</b>%0A" . "%0A%0A" .
-        "Тип довідки/Лікар: <b>$service</b>%0A" . "%0A%0A" .
-        "Коментар: <b>$comment</b>%0A";
+        "Тип довідки/Лікар: <b>$service</b>%0A" . "%0A%0A";
+    if($comment != "") {
+
+        $urlQuery .= "Коментар: <b>$comment</b>%0A";
+    }
 
     $urlQuery .= "&parse_mode=HTML";
 

@@ -15,12 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
             menu.style.top = "-110%"
             burger.style.display = "block"
             cancel.style.display = "none"
-
+            
         }
         cancel.addEventListener("click", cancelBurger)
-
+        
         links.forEach(item => {
-            item.addEventListener("click", cancelBurger)
+            item.addEventListener("click", function(){
+                cancelBurger()
+                burger.style.display = "none"
+            })
+            
         })
     }
 
