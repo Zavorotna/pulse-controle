@@ -3,20 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector(".burger")) {
         const burger = document.querySelector(".burger"),
             menu = document.querySelector(".menu"),
-            cancel = document.querySelector(".close_burger")
-
+            cancel = document.querySelector(".close_burger"),
+            links = menu.querySelectorAll("a")
+        console.log(links);
         burger.addEventListener('click', function () {
             menu.style.top = "111px"
             burger.style.display = "none"
             cancel.style.display = "block"
         })
-
-        cancel.addEventListener("click", function () {
+        function cancelBurger() {
             menu.style.top = "-110%"
             burger.style.display = "block"
             cancel.style.display = "none"
-        })
 
+        }
+        cancel.addEventListener("click", cancelBurger)
+
+        links.forEach(item => {
+            item.addEventListener("click", cancelBurger)
+        })
     }
 
     //custome select
