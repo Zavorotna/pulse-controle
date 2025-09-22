@@ -216,9 +216,13 @@ button
         text-transform: uppercase
 
 .contacts
-    display: none
-    +media(1024)
-        display: flex
+    gap: 10px
+    +media(768)
+        gap: 40rem
+    span
+        display: none
+        +media(1024)
+            display: flex
     a, p, span
         color: #121212
         font-size: 18rem
@@ -297,6 +301,7 @@ button
     flex-direction: column
     justify-content: center
     align-items: center
+
 .contacts-mobile
     p
         margin-bottom: 20px
