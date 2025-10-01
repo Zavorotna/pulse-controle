@@ -29,6 +29,7 @@ a
     cursor: pointer
 header
     padding-top: 111px
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.05)
     +media(1024)
         padding: 0
 main 
@@ -301,6 +302,8 @@ button
     flex-direction: column
     justify-content: center
     align-items: center
+    +media(1024)
+        display: none
 
 .contacts-mobile
     p
@@ -672,6 +675,19 @@ button
     p, a
         padding-bottom: 20rem
 
+
+.dovidka
+    margin-bottom: 10px
+    padding: 20px
+    border-radius: 10px
+    border: 1px solid #CCC
+
+.description_dovidka
+    h2
+        padding-bottom: 25rem
+        font-size: 30rem
+    > p
+        padding: 40rem 0
 //footer
 
 .footer
@@ -719,18 +735,22 @@ button
 
 // privacy
 .privacy_container
+    h2
+.privacy_container,
+    h2
+        font-size: 24rem
+.main_container_dovidky
     padding: 30rem 0 80rem
     h1
         margin-bottom: 30px
         padding: 50rem 0
         color: #237F94
         text-align: center
-        background: #000 url(../img/bg.png)
+        background: #000 url(../img/bg.png) no-repeat center/cover
     h2
         padding: 20rem 0
         color:#121212
         text-align: left
-        font-size: 24rem
         font-weight: 600
     ul
         padding-left: 25px

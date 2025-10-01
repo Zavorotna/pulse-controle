@@ -1,0 +1,32 @@
+doctype html
+html(lang="uk")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="shortcut icon", href="img/logo.png", type="image/x-icon")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        title центр медичних послуг “пульсконтроль”  
+    body 
+        include components/mixin
+        include components/header
+        main.main_container_dovidky
+            h1 медичні довідки
+            section.dovidky_container.wrapper.wrapper_md
+                +dovidka(dovidky.f083)
+                +dovidka(dovidky.f127)
+                +dovidka(dovidky.f086y)
+                +dovidka(dovidky.f1omk)
+                +dovidka(dovidky.f100)
+                +dovidka(dovidky.f086_1)
+                +dovidka(dovidky.f086_0)
+                +dovidka(dovidky.f_basein)
+                +dovidka(dovidky.f062)
+                +dovidka(dovidky.f_epidotochenia)
+                +dovidka(dovidky.f_pesticidi)
+                +dovidka(dovidky.f_tabir)
+                +dovidka(dovidky.f_dublikat)
+        include components/footer
+        script(src="js/scripts.js" defer)
