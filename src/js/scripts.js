@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
             })
 
         })
+
+        document.querySelector(".adress").addEventListener("click", cancelBurger)
     }
 
     //custome select
